@@ -1,13 +1,16 @@
-import { FileText, MailOpen } from "lucide-react";
+import { MailOpen } from "lucide-react";
 import { Button } from "./ui/button";
+import ResumeViewer from "./resume-viewer";
 
 export default function Socials() {
     return (
       <div className="flex items-center justify-center">
-        <Button className="flex-grow flex gap-2 cursor-pointer text-sm font-medium tracking-tighter">
-          <MailOpen /> 
-          Resume
-        </Button>
+        <ResumeViewer>
+          <Button className="flex-grow flex gap-2 cursor-pointer text-sm font-medium tracking-tighter">
+            <MailOpen /> 
+            Resume
+          </Button>
+        </ResumeViewer>
 
         <div className="flex items-center justify-center">
           <Button size={"icon"} variant={"secondary"} className="cursor-pointer" asChild>
