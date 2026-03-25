@@ -1,5 +1,6 @@
 import ProfileSection from "@/components/profile-section";
 import Socials from "@/components/socials";
+import Navigation from "@/components/navigation";
 
 export default function Page() {
   return (
@@ -8,9 +9,9 @@ export default function Page() {
       <section className="flex flex-col h-auto md:h-[calc(100vh-10rem)] md:sticky md:top-4">
         <ProfileSection />
 
-        {/* <div className="flex-grow flex items-center justify-center">
-          
-        </div> */}
+        <div className="flex-grow flex items-center">
+          <Navigation />
+        </div>
 
         <Socials />
       </section>

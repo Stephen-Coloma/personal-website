@@ -1,14 +1,26 @@
+import { FileText, MailOpen } from "lucide-react";
 import { Button } from "./ui/button";
 
 export default function Socials() {
     return (
       <div className="flex items-center justify-center">
-        <Button className="flex-grow cursor-pointer">Resume</Button>
-        <div className="flex items-center justify-center">
-          <Button size={"icon"} variant={"secondary"} className="cursor-pointer"><LinkedInIcon/></Button>
-          <Button size={"icon"} variant={"secondary"} className="cursor-pointer"><GithubIcon/></Button>
-        </div>
+        <Button className="flex-grow flex gap-2 cursor-pointer text-sm font-medium tracking-tighter">
+          <MailOpen /> 
+          Resume
+        </Button>
 
+        <div className="flex items-center justify-center">
+          <Button size={"icon"} variant={"secondary"} className="cursor-pointer" asChild>
+            <a href="https://www.linkedin.com/in/stephen-coloma/" target="_blank" rel="noopener noreferrer">
+              <LinkedInIcon/>
+            </a>
+          </Button>
+          <Button size={"icon"} variant={"secondary"} className="cursor-pointer" asChild>
+            <a href="https://github.com/Stephen-Coloma" target="_blank" rel="noopener noreferrer">
+              <GithubIcon/>
+            </a>
+          </Button>
+        </div>
       </div>
     )
 }
