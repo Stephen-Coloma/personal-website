@@ -24,7 +24,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={cn("antialiased", fontMono.variable, "font-sans", inter.variable, geistHeading.variable)}
     >
-      <body className="max-w-5xl border-red-900 border mx-auto">
+      <body className="max-w-4xl border-red-900 border mx-auto">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
