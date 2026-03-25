@@ -1,11 +1,18 @@
 import ProfileSection from "@/components/profile-section";
+import Socials from "@/components/socials";
 
 export default function Page() {
   return (
     <main className="px-2 py-4 grid grid-cols-1 md:grid-cols-5 md:gap-4">
       {/* left side */}
-      <section className="h-auto md:h-screen md:sticky md:top-0">
+      <section className="flex flex-col h-auto md:h-[calc(100vh-10rem)] md:sticky md:top-4">
         <ProfileSection />
+
+        {/* <div className="flex-grow flex items-center justify-center">
+          
+        </div> */}
+
+        <Socials />
       </section>
 
       {/* right side */}
