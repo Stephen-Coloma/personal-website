@@ -1,10 +1,11 @@
 import ProfileSection from "@/components/profile-section";
 import Socials from "@/components/socials";
 import Navigation from "@/components/navigation";
+import About from "@/components/about";
 
 export default function Page() {
   return (
-    <main className="px-2 py-4 grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 md:gap-4">
+    <main className="px-2 py-4 grid grid-cols-1 md:grid-cols-4 md:gap-4">
 
       {/* left side */}
       <section className="flex flex-col h-auto md:h-[calc(100vh-8rem)] md:sticky md:top-4 gap-4">
@@ -25,7 +26,8 @@ export default function Page() {
       </section> 
 
       {/* right side */}
-      <section className="col-span-1 md:col-span-3 lg:col-span-4 border-blue-900 border">
+      <section className="col-span-1 md:col-span-3 space-y-8">
+        <About />
         {/* Hero Section */}
         {/* About Section */}
         {/* Experience Section */}

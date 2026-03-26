@@ -130,4 +130,12 @@
   span {
     @apply text-sm font-medium tracking-tighter;
   }
+
+  p {
+    @apply text-sm font-medium tracking-tighter;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
 }

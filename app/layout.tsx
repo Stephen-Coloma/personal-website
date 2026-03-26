@@ -26,7 +26,7 @@ export default function RootLayout({
     >
       <body className="antialiased">
         <ThemeProvider>
-          <div className="max-w-4xl mx-auto border-red-900 border">
+          <div className="max-w-3xl mx-auto border-red-900 border">
             {children}
           </div>
         </ThemeProvider>
