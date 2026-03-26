@@ -34,16 +34,20 @@ export default function ProfileSection() {
         {/* Action Buttons */}
         <CalcomEmbed />
 
-        <div className="flex items-center">
-          <Button variant="secondary" className="w-1/2 cursor-pointer justify-start">
-            <div className="relative w-4 h-4 mr-2">
-              <Image src="/images/vibers.png" alt="Chat" fill className="object-contain" />
-            </div>
-            <span className="text-sm font-medium tracking-tighter">Chat</span>
+        <div className="flex items-center gap-1">
+          <Button variant="secondary" className="w-1/2 cursor-pointer justify-start" asChild>
+            <a href="viber://chat?number=%2B639458202981" rel="noopener noreferrer">
+              <div className="relative w-4 h-4 mr-2">
+                <Image src="/images/viber.png" alt="Viber" fill className="object-contain" />
+              </div>
+              <span className="text-sm font-medium tracking-tighter">Chat</span>
+            </a>
           </Button>
 
-          <Button variant="link" className="w-1/2 cursor-pointer">
-            <span className="text-sm font-medium tracking-tighter">Email me</span>
+          <Button variant="link" className="w-1/2 cursor-pointer" asChild>
+            <a href="mailto:hello@stephencoloma.com" rel="noopener noreferrer">
+              <span className="text-sm font-medium tracking-tighter">Email me</span>
+            </a>
           </Button>
         </div>
       </div>
