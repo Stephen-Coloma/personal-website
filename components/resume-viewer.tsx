@@ -39,7 +39,7 @@ export default function ResumeViewer({ children }: ResumeViewerProps) {
           <div className="flex items-center gap-2">
             <Button 
               variant="outline" 
-              className="cursor-pointer text-sm font-medium tracking-tighter"
+              className="cursor-pointer text-sm"
               asChild
             >
               <a href="/stephen_coloma_resume.pdf" target="_blank">
@@ -49,7 +49,7 @@ export default function ResumeViewer({ children }: ResumeViewerProps) {
             </Button>
             
             <Button 
-              className="cursor-pointer text-sm font-medium tracking-tighter"
+              className="cursor-pointer text-sm"
               asChild
             >
               <a href="/stephen_coloma_resume.pdf" download>

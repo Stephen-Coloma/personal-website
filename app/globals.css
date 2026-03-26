@@ -126,4 +126,8 @@
   html {
     @apply font-sans;
     }
+
+  span {
+    @apply text-sm font-medium tracking-tighter;
+  }
 }

@@ -20,7 +20,7 @@ export default function CalcomEmbed() {
       data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
     >
       <Phone className="mr-2" />
-      <span className="text-sm font-medium tracking-tighter">Book a call</span>
+      <span>Book a call</span>
       <ArrowRight className="absolute right-2" />
     </Button>
   )
