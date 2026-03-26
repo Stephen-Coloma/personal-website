@@ -2,6 +2,7 @@ import ProfileSection from "@/components/profile-section";
 import Socials from "@/components/socials";
 import Navigation from "@/components/navigation";
 import About from "@/components/about";
+import Experience from "@/components/experience";
 
 export default function Page() {
   return (
@@ -28,9 +29,8 @@ export default function Page() {
       {/* right side */}
       <section className="col-span-1 md:col-span-3 space-y-8">
         <About />
+        <Experience />
         {/* Hero Section */}
-        {/* About Section */}
-        {/* Experience Section */}
         {/* Projects Section */}
         {/* Tech Stack Section */}
       </section>
