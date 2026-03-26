@@ -1,6 +1,7 @@
 import Image from "next/image"
-import { BadgeCheck, MapPin, ArrowRight, Phone } from "lucide-react"
+import { BadgeCheck, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import CalcomEmbed from "./calcom-embed"
 
 export default function ProfileSection() {
   return (
@@ -31,11 +32,7 @@ export default function ProfileSection() {
         </div>
 
         {/* Action Buttons */}
-        <Button variant="default" className="w-full justify-start cursor-pointer relative">
-          <Phone className="mr-2" />
-          <span className="text-sm font-medium tracking-tighter">Book a call</span>
-          <ArrowRight className="absolute right-2" />
-        </Button>
+        <CalcomEmbed />
 
         <div className="flex items-center">
           <Button variant="secondary" className="w-1/2 cursor-pointer justify-start">
