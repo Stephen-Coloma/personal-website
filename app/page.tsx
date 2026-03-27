@@ -5,6 +5,7 @@ import Profile from "@/components/profile";
 import Experience from "@/components/experience";
 import Projects from "@/components/projects";
 import TechStack from "@/components/techstack";
+import Footer from "@/components/footer";
 
 export default function Page() {
   return (
@@ -39,10 +40,10 @@ export default function Page() {
         <Experience />
         <Projects />
         <TechStack />
-        {/* todo: footer section */}
       </section>
-
     </main>
+
+    <Footer />
     </>
   )
 }
