@@ -11,6 +11,7 @@ const experiences = [
     year: "2026",
     title: "BS Computer Science",
     company: "Saint Louis University",
+    techStack: ["Algorithms", "SDLC", "Web Development", "Software Engineering"],
     description:
       "Pursuing a degree in Computer Science with a focus on software engineering and algorithms. Engaged in research, hackathons, and leadership roles within the university's tech community.",
   },
@@ -19,6 +20,7 @@ const experiences = [
     year: "2025",
     title: "Full Stack Developer Intern",
     company: "Old.St Labs",
+    techStack: ["Next.js", "NestJS", "Nx Workspace", "AWS DynamoDB", "AWS SQS", "Jest"],
     description:
       "Worked on scalable web applications for enterprise clients. Contributed to backend API design, frontend feature development, and cloud infrastructure. Collaborated closely with senior engineers to ship production-ready features.",
   },
@@ -27,6 +29,7 @@ const experiences = [
     year: "2025",
     title: "Web Developer",
     company: "SLU IT Committee",
+    techStack: ["PHP", "MySQL", "GitHub Actions", "Docker", "AWS EC2"],
     description:
       "Built and maintained the university's internal web systems. Implemented new features based on stakeholder requirements and ensured consistent uptime. Collaborated with the team to modernize legacy systems.",
   },
@@ -35,14 +38,16 @@ const experiences = [
     year: "2024",
     title: "IT Help Desk",
     company: "SLU IT Committee",
+    techStack: ["Hardware Troubleshooting", "System Monitoring", "Network Troubleshooting", "Technical Support"],
     description:
       "Provided technical support to faculty and students across campus. Diagnosed hardware and software issues and coordinated resolutions. Gained hands-on experience in network troubleshooting and system administration.",
   },
   {
     id: "item-5",
     year: "2022",
-    title: "Hello World",
+    title: "Hello World! 👋🏻",
     company: "Where it all began",
+    techStack: ["HTML", "CSS", "JavaScript"],
     description:
       "Wrote the first lines of code and never looked back. Started with basic programming concepts and quickly developed a passion for building things on the web. This curiosity laid the foundation for everything that followed.",
   },
@@ -57,7 +62,7 @@ export default function Experience() {
 
       <div className="relative flex flex-col">
         {/* Vertical connecting line */}
-        <div className="absolute left-10 top-0 bottom-0 w-px bg-border" />
+        <div className="absolute left-8 top-0 bottom-0 w-px bg-border" />
 
         <AccordionPrimitive.Root type="single" collapsible className="flex flex-col">
           {experiences.map((exp) => (
@@ -71,12 +76,12 @@ export default function Experience() {
                   )}
                 >
                   {/* Year */}
-                  <span className="w-20 shrink-0 text-right text-muted-foreground pr-4 z-10 bg-background">
+                  <span className="w-16 shrink-0 text-center text-muted-foreground z-10 bg-background">
                     {exp.year}
                   </span>
 
                   {/* Dot on the line */}
-                  <div className="w-1.5 h-1.5 rounded-full bg-muted-foreground shrink-0 -ml-[3px] z-10" />
+                  <div className="w-1.5 h-1.5 bg-muted-foreground shrink-0 -ml-[3px] z-10" />
 
                   {/* Title + Company */}
                   <div className="flex flex-col pl-3 text-left flex-1">
@@ -85,12 +90,26 @@ export default function Experience() {
                   </div>
 
                   {/* Chevron: rotates right → down on open */}
-                  <ChevronRight className="w-4 h-4 text-muted-foreground shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-90" />
+                  <ChevronRight className="w-4 h-4 mr-4 text-muted-foreground shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-90" />
                 </AccordionPrimitive.Trigger>
               </AccordionPrimitive.Header>
 
-              <AccordionContent className="pl-24 pr-0 pb-3">
-                <span className="text-muted-foreground leading-relaxed">{exp.description}</span>
+              <AccordionContent className="pl-18 pr-0 pb-3">
+                <div className="flex flex-col gap-4">
+                  <span className="text-muted-foreground leading-relaxed">{exp.description}</span>
+                  {exp.techStack && exp.techStack.length > 0 && (
+                    <div className="flex flex-wrap gap-2">
+                      {exp.techStack.map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-1 text-[10px] font-medium bg-muted text-muted-foreground border border-border"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </AccordionContent>
             </AccordionItem>
           ))}
