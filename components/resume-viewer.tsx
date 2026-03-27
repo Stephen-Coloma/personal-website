@@ -1,5 +1,3 @@
-"use client"
-
 import * as React from "react"
 import { Download, ExternalLink, } from "lucide-react"
 import { 

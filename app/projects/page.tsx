@@ -1,10 +1,9 @@
-import { MoveUpRight } from "lucide-react";
-import ProjectItem from "./project-item";
-import Link from "next/link";
-import { Button } from "./ui/button";
+import ProjectItem from "@/components/project-item";
+import { Button } from "@/components/ui/button";
+import { MoveLeft } from "lucide-react";
 
-export default function Projects() {
-  const mainProjects = [
+export default function ProjectsPage() {
+    const mainProjects = [
     {
       cover: "/images/profile-photo.png",
       title: "Kitakita",
@@ -39,25 +38,24 @@ export default function Projects() {
     },
   ];
 
-  return (
-    <div id="projects" >
-        <div className="w-full mb-1 flex justify-between">
-          <span className="text-muted-foreground">[Projects]</span>
-
+    return (
+      <div className="px-2 py-4 space-y-2 md:space-y-0">
+        <div className="w-full mb-4 flex justify-between">
           <Button
               variant="link"
               asChild
-              className={`text-muted-foreground cursor-pointer text-sm hover:no-underline hover:text-primary transition-colors`}
+              className={`text-muted-foreground cursor-pointer text-sm hover:no-underline hover:text-primary p-0 md:p-2 transition-colors`}
           >
-              <a href={`/projects`}>
-                  View all <MoveUpRight />
+              <a href={`/`}>
+                  <MoveLeft /> Back to Home
               </a>
           </Button>
+
+          <span className="text-muted-foreground">[Showing All Projects]</span>
         </div>
 
-    <div className="space-y-2 md:space-y-0">
-      {mainProjects.map((project) => (
-        <ProjectItem
+        {mainProjects.map((project) => (
+          <ProjectItem
           key={project.title}
           cover={project.cover}
           title={project.title}
@@ -65,9 +63,8 @@ export default function Projects() {
           link={project.link}
           techStack={project.techStack}
           images={project.images}
-        />
-      ))}
-    </div>
-    </div>
-  );
+          />
+        ))}
+      </div>
+    )
 }
