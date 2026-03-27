@@ -35,8 +35,8 @@ export default function ProjectItem({ cover, title, description, link, techStack
     };
 
     return (
-        <>
-            <div className="group flex flex-row gap-4 px-3 py-3 transition-colors duration-200 bg-muted/50 md:bg-background hover:bg-muted/50">
+        <div className="space-y-3 p-3 transition-colors duration-200 bg-muted/50 md:bg-background hover:bg-muted/50">
+            <div className="group flex flex-row gap-3">
                 {/* Left: Cover Image */}
                 <div className="relative shrink-0 w-30 h-30 overflow-hidden">
                     <Image src={cover} alt={title} fill className="object-cover" />
@@ -87,13 +87,13 @@ export default function ProjectItem({ cover, title, description, link, techStack
                 </div>
             </div>
 
-            {/* {techStack.length > 0 && (
-                <div className="flex flex-wrap gap-2 mt-1">
+            {techStack.length > 0 && (
+                <div className="flex flex-wrap gap-2">
                     {techStack.map((tech) => (
                         <TechStackBadge key={tech} tech={tech} />
                     ))}
                 </div>
-            )} */}
+            )}
 
             {/* Lightbox */}
             <ImageLightbox
@@ -105,6 +105,6 @@ export default function ProjectItem({ cover, title, description, link, techStack
                 onNext={next}
                 onPrev={prev}
             />
-        </>
+        </div>
     );
 }
