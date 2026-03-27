@@ -5,7 +5,7 @@ import TechStackBadge from "@/components/techstack-badge";
 
 export default function TechStackPage() {
     return (
-        <div className="px-2 py-4 space-y-2">
+        <div className="animate-enter-up px-2 py-4 space-y-2">
             {/* Header */}
             <div className="w-full mb-4 flex justify-between">
                 <Button
