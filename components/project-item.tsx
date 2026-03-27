@@ -39,7 +39,7 @@ export default function ProjectItem({ cover, title, description, link, techStack
             <div className="group flex flex-row gap-2">
                 {/* Left: Cover Image */}
                 <div className="relative shrink-0 w-29  h-29 md:w-34 md:h-34 overflow-hidden">
-                    <Image src={cover} alt={title} fill className="object-cover" />
+                    <Image src={cover} alt={title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                 </div>
 
                 {/* Right: Info */}
@@ -73,7 +73,7 @@ export default function ProjectItem({ cover, title, description, link, techStack
                                 onClick={() => openAt(i)}
                                 className="relative md:w-16 md:h-8 w-10 h-6 overflow-hidden border border-border shrink-0 hover:opacity-80 transition-opacity cursor-pointer"
                             >
-                                <Image src={img} alt={`${title} screenshot ${i + 1}`} fill className="object-cover" />
+                                <Image src={img} alt={`${title} screenshot ${i + 1}`} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
 
                                 {/* +N overflow hint on last visible thumbnail */}
                                 {i === MAX_VISIBLE - 1 && extraCount > 0 && (

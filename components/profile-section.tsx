@@ -13,6 +13,7 @@ export default function ProfileSection() {
           src="/images/profile-photo.png"
           alt="Stephen Coloma"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover"
           priority
         />
@@ -39,7 +40,7 @@ export default function ProfileSection() {
           <Button variant="secondary" className="w-1/2 cursor-pointer justify-start" asChild>
             <a href="viber://chat?number=%2B639458202981" rel="noopener noreferrer">
               <div className="relative w-4 h-4 mr-2">
-                <Image src="/images/viber.png" alt="Viber" fill className="object-contain" />
+                <Image src="/images/viber.png" alt="Viber" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-contain" />
               </div>
               <span>Chat</span>
             </a>
