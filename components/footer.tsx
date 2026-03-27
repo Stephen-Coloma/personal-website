@@ -18,7 +18,7 @@ export default function Footer() {
 
             {/* Text */}
             <div className="absolute bottom-0 left-0 right-0 px-2 pb-2 select-none pointer-events-none">
-                <span className="text-[clamp(5rem,22vw,12rem)] font-bold leading-none tracking-tighter text-white whitespace-nowrap">
+                <span className="text-[clamp(5rem,22vw,12rem)] font-bold leading-none tracking-tighter text-primary whitespace-nowrap">
                     build.
                 </span>
             </div>

@@ -35,7 +35,6 @@ export default function Page() {
 
         {/* right side */}
         <section className="col-span-1 md:col-span-3 space-y-8">
-          {/* todo: Hero Section */}
           <About />
           <Experience />
           <Projects />
