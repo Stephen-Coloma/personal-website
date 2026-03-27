@@ -27,7 +27,7 @@ export default function ResumeViewer({ children }: ResumeViewerProps) {
               <span className="text-primary font-bold text-xs">PDF</span>
             </div>
             <div>
-              <DialogTitle className="text-sm font-semibold tracking-tight">
+              <DialogTitle className="font-semibold tracking-tight">
                 stephen_coloma_resume.pdf
               </DialogTitle>
               <p className="text-xs text-muted-foreground font-medium">Last updated: March 2026</p>
@@ -37,7 +37,7 @@ export default function ResumeViewer({ children }: ResumeViewerProps) {
           <div className="flex items-center gap-2">
             <Button 
               variant="outline" 
-              className="cursor-pointer text-sm"
+              className="cursor-pointer"
               asChild
             >
               <a href="/stephen_coloma_resume.pdf" target="_blank">
@@ -47,7 +47,7 @@ export default function ResumeViewer({ children }: ResumeViewerProps) {
             </Button>
             
             <Button 
-              className="cursor-pointer text-sm"
+              className="cursor-pointer"
               asChild
             >
               <a href="/stephen_coloma_resume.pdf" download>

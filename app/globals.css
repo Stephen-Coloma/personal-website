@@ -128,11 +128,11 @@
   }
 
   span {
-    @apply text-sm font-medium leading-relaxed tracking-tighter;
+    @apply text-xs md:text-sm font-medium leading-relaxed tracking-tighter;
   }
 
-  p {
-    @apply text-sm font-medium leading-relaxed tracking-tighter;
+  button {
+    @apply text-xs md:text-sm font-medium leading-relaxed tracking-tighter;
   }
 
   ::selection {

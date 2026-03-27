@@ -6,7 +6,7 @@ import Socials from "./socials"
 
 export default function ProfileSection() {
   return (
-    <div className="flex flex-row md:flex-col gap-4 md:gap-1 items-center md:items-start">
+    <div className="flex flex-row md:flex-col gap-2 md:gap-1 items-center md:items-start">
       {/* Square Profile Image - Fixed width in mobile, Full Width in desktop */}
       <div className="relative aspect-square w-40 md:w-full shrink-0 overflow-hidden">
         <Image

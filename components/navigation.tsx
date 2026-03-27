@@ -51,10 +51,11 @@ export default function Navigation() {
                     asChild
                     className={`${
                         activeSection === item.id ? "text-foreground" : "text-muted-foreground"
-                    } cursor-pointer text-sm hover:no-underline hover:text-primary p-0 md:p-2 transition-colors`}
+                    } cursor-pointer hover:no-underline hover:text-primary p-0 md:p-2 transition-colors`}
                 >
                     <a href={`#${item.id}`}>
-                        {item.label} <MoveUpRight />
+                        <span>{item.label}</span> 
+                        <MoveUpRight />
                     </a>
                 </Button>
             ))}

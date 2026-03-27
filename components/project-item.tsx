@@ -35,10 +35,10 @@ export default function ProjectItem({ cover, title, description, link, techStack
     };
 
     return (
-        <div className="space-y-3 p-3 transition-colors duration-200 bg-muted/50 md:bg-background hover:bg-muted/50">
-            <div className="group flex flex-row gap-3">
+        <div className="space-y-2 p-2 md:p-3 transition-colors duration-200 bg-muted/50 md:bg-background hover:bg-muted/50">
+            <div className="group flex flex-row gap-2">
                 {/* Left: Cover Image */}
-                <div className="relative shrink-0 w-30 h-30 overflow-hidden">
+                <div className="relative shrink-0 w-29  h-29 md:w-34 md:h-34 overflow-hidden">
                     <Image src={cover} alt={title} fill className="object-cover" />
                 </div>
 
@@ -63,15 +63,15 @@ export default function ProjectItem({ cover, title, description, link, techStack
                         </TooltipContent>
                     </Tooltip>
 
-                    <span className="text-muted-foreground line-clamp-2">{description}</span>
+                    <span className="text-muted-foreground line-clamp-3">{description}</span>
 
                     {/* Screenshot thumbnails */}
-                    <div className="flex gap-2 mt-2">
+                    <div className="flex gap-2">
                         {visibleImages.map((img, i) => (
                             <button
                                 key={i}
                                 onClick={() => openAt(i)}
-                                className="relative w-16 h-10 overflow-hidden border border-border shrink-0 hover:opacity-80 transition-opacity cursor-pointer"
+                                className="relative md:w-16 md:h-8 w-10 h-6 overflow-hidden border border-border shrink-0 hover:opacity-80 transition-opacity cursor-pointer"
                             >
                                 <Image src={img} alt={`${title} screenshot ${i + 1}`} fill className="object-cover" />
 

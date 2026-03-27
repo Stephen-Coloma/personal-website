@@ -44,7 +44,7 @@ export default function ProjectsPage() {
           <Button
               variant="link"
               asChild
-              className={`text-muted-foreground cursor-pointer text-sm hover:no-underline hover:text-primary p-0 md:p-2 transition-colors`}
+              className={`text-muted-foreground cursor-pointer hover:no-underline hover:text-primary p-0 md:p-2 transition-colors`}
           >
               <a href={`/`}>
                   <MoveLeft /> Back to Home

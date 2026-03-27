@@ -47,10 +47,10 @@ export default function Projects() {
           <Button
               variant="link"
               asChild
-              className={`text-muted-foreground cursor-pointer text-sm hover:no-underline hover:text-primary transition-colors`}
+              className={`text-muted-foreground cursor-pointer hover:no-underline hover:text-primary transition-colors`}
           >
               <a href={`/projects`}>
-                  View all <MoveUpRight />
+                <span>View all</span> <MoveUpRight />
               </a>
           </Button>
         </div>

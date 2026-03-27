@@ -32,7 +32,7 @@ export default function Page() {
       </section> 
 
       {/* right side */}
-      <section className="col-span-1 md:col-span-3 space-y-12">
+      <section className="col-span-1 md:col-span-3 space-y-8">
         <About />
         <Experience />
         <Projects />

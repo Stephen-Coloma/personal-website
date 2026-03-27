@@ -7,9 +7,9 @@ export default function Socials() {
       <div className="flex items-center justify-center">
         {/* resume */}
         <ResumeViewer>
-          <Button className="flex-grow flex gap-2 cursor-pointer text-sm">
+          <Button className="flex-grow flex gap-2 cursor-pointer">
             <MailOpen /> 
-            Resume
+            <span>Resume</span>
           </Button>
         </ResumeViewer>
 
