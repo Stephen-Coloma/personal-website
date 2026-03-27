@@ -7,22 +7,26 @@ import Projects from "@/components/projects";
 
 export default function Page() {
   return (
-    <main className="px-2 py-4 grid grid-cols-1 md:grid-cols-4 md:gap-4">
+    <>
+      {/* Mobile sticky nav bar — hidden on desktop */}
+      <div className="md:hidden sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border px-4 py-2">
+        <Navigation />
+      </div>
+
+      <main className="px-2 py-4 grid grid-cols-1 md:grid-cols-4 md:gap-4">
 
       {/* left side */}
       <section className="flex flex-col h-auto md:h-[calc(100vh-8rem)] md:sticky md:top-4 gap-4">
-        {/* Navigation row for mobile (top), centered row for desktop (middle) */}
-        <div className="order-1 md:order-2 md:flex-grow flex items-center justify-center md:items-center">
+
+        <ProfileSection />
+        
+        {/* Navigation — hidden on mobile (handled by sticky bar above), visible on desktop */}
+        <div className="hidden md:flex md:flex-grow items-center justify-center md:items-center">
           <Navigation />
         </div>
 
-        {/* Profile split for mobile (2nd), top for desktop (1st) */}
-        <div className="order-2 md:order-1">
-          <ProfileSection />
-        </div>
-
-        {/* Placed in profile section for mobile */}
-        <div className="order-3 hidden md:block">
+        {/* Placed in profile section for mobile -handled by profile section component */}
+        <div className="hidden md:block">
           <Socials />
         </div>
       </section> 
@@ -32,11 +36,12 @@ export default function Page() {
         <About />
         <Experience />
         <Projects />
-        {/* Hero Section */}
-        {/* Projects Section */}
-        {/* Tech Stack Section */}
+        {/* todo: Hero Section */}
+        {/* todo: Tech Stack Section */}
+        {/* todo: footer section */}
       </section>
 
     </main>
+    </>
   )
 }
