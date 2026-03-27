@@ -24,7 +24,7 @@ export default function TechStack() {
           {mainTechStack.map((category) => (
             <div key={category.label} className="flex flex-col gap-2">
               {/* Category label */}
-              <span className="text-muted-foreground uppercase">
+              <span className="text-muted-foreground uppercase font-bold">
                 {category.label}
               </span>
 

@@ -136,6 +136,7 @@
   }
 
   ::selection {
-    @apply bg-primary text-primary-foreground;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
   }
 }
