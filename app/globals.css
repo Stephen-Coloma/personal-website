@@ -128,11 +128,11 @@
   }
 
   span {
-    @apply text-sm font-medium tracking-tighter;
+    @apply text-sm font-medium leading-relaxed tracking-tighter;
   }
 
   p {
-    @apply text-sm font-medium tracking-tighter;
+    @apply text-sm font-medium leading-relaxed tracking-tighter;
   }
 
   ::selection {

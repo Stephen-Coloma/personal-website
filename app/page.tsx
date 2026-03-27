@@ -3,6 +3,7 @@ import Socials from "@/components/socials";
 import Navigation from "@/components/navigation";
 import About from "@/components/about";
 import Experience from "@/components/experience";
+import Projects from "@/components/projects";
 
 export default function Page() {
   return (
@@ -27,9 +28,10 @@ export default function Page() {
       </section> 
 
       {/* right side */}
-      <section className="col-span-1 md:col-span-3 space-y-8">
+      <section className="col-span-1 md:col-span-3 space-y-16">
         <About />
         <Experience />
+        <Projects />
         {/* Hero Section */}
         {/* Projects Section */}
         {/* Tech Stack Section */}

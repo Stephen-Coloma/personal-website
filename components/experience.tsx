@@ -4,6 +4,7 @@ import { ChevronRight } from "lucide-react"
 import { Accordion as AccordionPrimitive } from "radix-ui"
 import { cn } from "@/lib/utils"
 import { AccordionContent, AccordionItem } from "@/components/ui/accordion"
+import TechStackBadge from "./techstack-badge"
 
 const experiences = [
   {
@@ -100,12 +101,7 @@ export default function Experience() {
                   {exp.techStack && exp.techStack.length > 0 && (
                     <div className="flex flex-wrap gap-2">
                       {exp.techStack.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-1 text-[10px] font-medium bg-muted text-muted-foreground border border-border"
-                        >
-                          {tech}
-                        </span>
+                        <TechStackBadge key={tech} tech={tech} />
                       ))}
                     </div>
                   )}
