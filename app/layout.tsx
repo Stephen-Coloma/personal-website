@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { TooltipProvider } from "@/components/ui/tooltip"
 import { cn } from "@/lib/utils";
 
 const geistHeading = Geist({subsets:['latin'],variable:'--font-heading'});
@@ -26,9 +27,11 @@ export default function RootLayout({
     >
       <body className="antialiased">
         <ThemeProvider>
-          <div className="max-w-3xl mx-auto">
-            {children}
-          </div>
+          <TooltipProvider>
+            <div className="max-w-3xl mx-auto">
+              {children}
+            </div>
+          </TooltipProvider>
         </ThemeProvider>
       </body>
     </html>
