@@ -5,7 +5,7 @@ import { featuredProjects } from "@/data/projects-data";
 
 export default function Projects() {
   return (
-    <div id="projects" >
+    <section id="projects" >
         <div className="w-full mb-1 flex justify-between">
           <span className="text-muted-foreground">[Projects]</span>
 
@@ -33,6 +33,6 @@ export default function Projects() {
         />
       ))}
     </div>
-    </div>
+    </section>
   );
 }

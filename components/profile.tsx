@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import CalcomEmbed from "./calcom-embed"
 import Socials from "./socials"
 
-export default function ProfileSection() {
+export default function Profile() {
   return (
     <div className="flex flex-row md:flex-col gap-2 md:gap-1 items-center md:items-start">
       {/* Square Profile Image - Fixed width in mobile, Full Width in desktop */}

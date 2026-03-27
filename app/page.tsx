@@ -1,9 +1,10 @@
-import ProfileSection from "@/components/profile-section";
 import Socials from "@/components/socials";
 import Navigation from "@/components/navigation";
 import About from "@/components/about";
+import Profile from "@/components/profile";
 import Experience from "@/components/experience";
 import Projects from "@/components/projects";
+import TechStack from "@/components/techstack";
 
 export default function Page() {
   return (
@@ -18,7 +19,7 @@ export default function Page() {
       {/* left side */}
       <section className="flex flex-col h-auto md:h-[calc(100vh-8rem)] md:sticky md:top-4 gap-4">
 
-        <ProfileSection />
+        <Profile />
         
         {/* Navigation — hidden on mobile (handled by sticky bar above), visible on desktop */}
         <div className="hidden md:flex md:flex-grow items-center justify-center md:items-center">
@@ -33,11 +34,11 @@ export default function Page() {
 
       {/* right side */}
       <section className="col-span-1 md:col-span-3 space-y-8">
+        {/* todo: Hero Section */}
         <About />
         <Experience />
         <Projects />
-        {/* todo: Hero Section */}
-        {/* todo: Tech Stack Section */}
+        <TechStack />
         {/* todo: footer section */}
       </section>
 

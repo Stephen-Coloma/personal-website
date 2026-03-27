@@ -1,6 +1,6 @@
 export default function About() {
     return (
-    <div id="about">
+    <section id="about">
         <div className="w-full mb-4">
           <span className="text-muted-foreground">[About]</span>
         </div>
@@ -12,6 +12,6 @@ export default function About() {
 
             <span className="text-sm">I push myself to build beyond what I already know because growth starts where comfort ends.</span>
         </div>
-      </div>
+      </section>
     );
 } 

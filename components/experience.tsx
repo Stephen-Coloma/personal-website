@@ -7,7 +7,7 @@ import { experiences } from "@/data/experience-data"
 
 export default function Experience() {
   return (
-    <div id="experience">
+    <section id="experience">
       <div className="w-full mb-4">
         <span className="text-muted-foreground">[Experience]</span>
       </div>
@@ -62,6 +62,6 @@ export default function Experience() {
           ))}
         </AccordionPrimitive.Root>
       </div>
-    </div>
+    </section>
   )
 }
