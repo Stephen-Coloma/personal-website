@@ -6,9 +6,9 @@ import TechStackBadge from "./techstack-badge";
 export default function TechStack() {
     return (
       <section id="tech-stack">
+        {/* section title */}
         <div className="w-full mb-4 flex justify-between">
           <span className="text-muted-foreground">[Tech Stack]</span>
-
           <Button
               variant="link"
               asChild

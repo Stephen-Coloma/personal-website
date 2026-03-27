@@ -8,7 +8,7 @@ export default function Profile() {
   return (
     <div className="flex flex-row md:flex-col gap-2 md:gap-1 items-center md:items-start">
       {/* Square Profile Image - Fixed width in mobile, Full Width in desktop */}
-      <div className="relative aspect-square w-40 md:w-full shrink-0 overflow-hidden">
+      <div className="relative aspect-square w-44 md:w-full shrink-0 overflow-hidden">
         <Image
           src="/images/profile-photo.png"
           alt="Stephen Coloma"
@@ -22,15 +22,18 @@ export default function Profile() {
       </div>
 
       {/* Profile Details - Flex-grow in mobile, Full Width in desktop */}
-      <div className="flex-1 flex flex-col gap-2 md:w-full justify-center md:justify-start">
-        <div className="flex items-center gap-2 text-foreground">
-          <h1 className="text-xl md:text-lg font-semibold tracking-tighter">Stephen Coloma</h1>
-          <BadgeCheck className="h-4 w-4 text-blue-500" strokeWidth={3}/>
+      <div className="flex-1 flex flex-col gap-1 md:w-full justify-center md:justify-start">
+        <div>
+          <div className="flex items-center gap-2">
+            <h1 className="text-xl md:text-lg font-semibold tracking-tighter">Stephen Coloma</h1>
+            <BadgeCheck className="h-4 w-4 text-blue-500" strokeWidth={3}/>
+          </div>
+          <span className="text-sm text-muted-foreground">Software Engineer</span>
         </div>
 
         <div className="flex items-center gap-1 text-muted-foreground">
           <MapPin className="h-4 w-4 text-muted-foreground" />
-          <span>Baguio City, Philippines</span>
+          <span className="text-sm text-muted-foreground">Baguio City, Philippines</span>
         </div>
 
         {/* Action Buttons */}

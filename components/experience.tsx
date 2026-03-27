@@ -8,6 +8,7 @@ import { experiences } from "@/data/experience-data"
 export default function Experience() {
   return (
     <section id="experience">
+      {/* section title */}
       <div className="w-full mb-4">
         <span className="text-muted-foreground">[Experience]</span>
       </div>

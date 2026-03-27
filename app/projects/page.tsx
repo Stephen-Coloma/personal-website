@@ -37,7 +37,7 @@ export default function ProjectsPage() {
 
       {/* Accent text */}
       <div className="pt-8 md:pt-16 pb-8 overflow-hidden select-none">
-        <p className="text-[clamp(2.5rem,10vw,5rem)] font-bold leading-none text-muted tracking-tighter whitespace-nowrap">
+        <p className="text-[clamp(2.5rem,10vw,5rem)] font-bold leading-none text-muted-foreground dark:text-muted tracking-tighter whitespace-nowrap">
           building cool stuff
         </p>
       </div>

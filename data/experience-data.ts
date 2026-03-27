@@ -2,7 +2,7 @@ export const experiences = [
   {
     id: "item-1",
     year: "2026",
-    title: "BS Computer Science",
+    title: "BS Computer Science (Summa Cum Laude)",
     company: "Saint Louis University",
     techStack: ["Algorithms", "SDLC", "Web Development", "Software Engineering"],
     description:
@@ -20,7 +20,7 @@ export const experiences = [
   {
     id: "item-3",
     year: "2025",
-    title: "Web Developer",
+    title: "Full Stack Web Developer",
     company: "SLU IT Committee",
     techStack: ["PHP", "MySQL", "GitHub Actions", "Docker", "AWS EC2"],
     description:
@@ -29,7 +29,7 @@ export const experiences = [
   {
     id: "item-4",
     year: "2024",
-    title: "IT Help Desk",
+    title: "IT Tech Support",
     company: "SLU IT Committee",
     techStack: ["Hardware Troubleshooting", "System Monitoring", "Network Troubleshooting", "Technical Support"],
     description:
