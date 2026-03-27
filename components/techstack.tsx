@@ -31,7 +31,7 @@ export default function TechStack() {
               {/* Badges */}
               <div className="ml-4 flex flex-wrap gap-2">
                 {category.items.map((tech) => (
-                  <TechStackBadge key={tech} tech={tech} className="text-xs" />
+                  <TechStackBadge key={tech} tech={tech} className="text-xs md:text-sm" />
                 ))}
               </div>
             </div>
