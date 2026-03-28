@@ -4,7 +4,7 @@ export  const featuredProjects = [
     title: "Kitakita (Under Development)",
     description: "A scalable event hosting platform built with Infrastructure as Code (IaC) via AWS CDK. It showcases a robust serverless architecture leveraging AWS Lambda, DynamoDB, and SQS for resilient event management.",
     link: "kitakita.stephencoloma.com",
-    techStack: ["Next.js", "TypeScript", "NestJS", "JWT", "AWS CDK", "AWS SDK", "Lambda", "DynamoDB", "S3", "SQS", "API Gateway", "Serverless Architecture"],
+    techStack: ["Next.js", "TypeScript", "NestJS", "JWT", "AWS CDK", "AWS SDK", "Lambda", "DynamoDB", "S3", "SQS", "API Gateway", "Serverless Architecture", "Github Actions"],
     images: ["/images/profile-photo.png", "/images/profile-photo.png", "/images/profile-photo.png", "/images/profile-photo.png","/images/profile-photo.png", "/images/profile-photo.png"],
   },
   {
@@ -55,7 +55,7 @@ export  const otherProjects = [
     title: "Cramble",
     description: "An intelligent, full-stack quiz platform that leverages the Gemini AI API to transform study notes into interactive flashcards. Includes deep features like progress tracking, automated deck generation, and secure user authentication.",
     link: "https://github.com/Stephen-Coloma/Cramble",
-    techStack: ["Next.js", "TypeScript", "Node.js", "Express.js", "Google Gemini API", "MySQL", "JWT"],
+    techStack: ["Next.js", "TypeScript", "Node.js", "Express.js", "Google Gemini API", "MySQL", "JWT", "Docker"],
     images: ["/images/profile-photo.png", "/images/profile-photo.png", "/images/profile-photo.png", "/images/profile-photo.png","/images/profile-photo.png", "/images/profile-photo.png"],
   },
   {

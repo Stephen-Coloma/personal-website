@@ -26,7 +26,7 @@ export const allTechStack: TechCategory[] = [
   },
   {
     label: "Developer Tools",
-    items: ["Git", "GitHub", "Postman", "Jest", "Playwright", "MCP"],
+    items: ["Git", "GitHub", "Postman", "Linux", "Jest", "Playwright", "Swagger", "MCP"],
   },
   {
     label: "Productivity Tools",
