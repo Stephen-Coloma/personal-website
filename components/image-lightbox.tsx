@@ -80,6 +80,8 @@ export default function ImageLightbox({
                             alt={`${title} ${activeIndex + 1}`}
                             fill
                             className="object-contain"
+                            priority
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                     </div>
 

@@ -61,7 +61,7 @@ export default function Profile() {
               <Button variant="secondary" className="w-1/2 cursor-pointer justify-start" asChild onClick={handleViberClick}>
                 <Link href="viber://chat?number=%2B639458202981" rel="noopener noreferrer">
                   <div className="relative w-4 h-4 mr-2">
-                    <Image src="/images/viber.png" alt="Viber" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-contain" />
+                    <Image src="/images/viber.png" alt="Viber" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" priority className="object-contain" />
                   </div>
                   <span>Chat</span>
                 </Link>

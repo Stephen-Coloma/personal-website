@@ -10,6 +10,7 @@ export default function Footer() {
                     alt="Footer background"
                     fill
                     className="object-cover object-top"
+                    priority
                 />
 
                 {/* Fade overlay */}

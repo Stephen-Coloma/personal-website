@@ -1,6 +1,8 @@
 "use client"
 
 import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "motion/react";
 
 export default function About() {
   const { setTheme, resolvedTheme } = useTheme();
@@ -21,11 +23,7 @@ export default function About() {
       </div>
 
       {/* hero title */}
-      <div className="select-none">
-        <p className="text-[clamp(2.5rem,12vw,5rem)] font-bold leading-none tracking-tighter bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">
-          Turning ideas into systems.
-        </p>
-      </div>
+     <Hero/>
 
       {/* hero description */}
       <div className="flex flex-col gap-4">
@@ -36,5 +34,41 @@ export default function About() {
           <span className="text-sm text-muted-foreground">I push myself beyond what I already know because <strong className="px-1 bg-primary text-background underline">growth starts where comfort ends.</strong></span>
       </div>
     </section>
+  );
+}
+
+function Hero() {
+  const words = ["ideas", "plans", "vision", "specs", "drafts"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % words.length);
+    }, 2500);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="select-none">
+        <span className="font-bold leading-none tracking-tighter text-[clamp(3.5rem,12vw,5rem)] bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">Turning&nbsp;</span>
+        
+        <AnimatePresence mode="wait">
+          <motion.span
+            key={words[index]}
+            initial={{ y: "-100%", opacity: 0 }}
+            animate={{ y: "0%", opacity: 1 }}
+            exit={{ y: "100%", opacity: 0 }}
+            transition={{ 
+              duration: 0.4, 
+              ease: [0.32, 0.72, 0, 1] 
+            }}
+            className="font-bold leading-none tracking-tighter text-[clamp(3.5rem,12vw,5rem)] bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent"
+          >
+            {words[index]}
+          </motion.span>
+        </AnimatePresence>
+
+        <span className="flex flex-wrap items-center font-bold leading-none tracking-tighter text-[clamp(3.5rem,12vw,5rem)] bg-gradient-to-br from-foreground to-muted-foreground bg-clip-text text-transparent">&nbsp;into systems.</span>
+    </div>
   );
 }

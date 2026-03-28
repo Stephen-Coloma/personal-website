@@ -23,11 +23,13 @@ export default function ProjectItem({ cover, title, description, link, techStack
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [activeIndex, setActiveIndex] = useState(0);
 
-    const visibleImages = images?.slice(0, MAX_VISIBLE) ?? [];
-    const extraCount = (images?.length ?? 0) - MAX_VISIBLE;
+    const allImages = [cover, ...images];
 
-    const prev = () => setActiveIndex((i) => (i - 1 + (images?.length ?? 1)) % (images?.length ?? 1));
-    const next = () => setActiveIndex((i) => (i + 1) % (images?.length ?? 1));
+    const previewImages = images?.slice(0, MAX_VISIBLE) ?? [];
+    const extraCount = (allImages?.length ?? 0) - MAX_VISIBLE;
+
+    const prev = () => setActiveIndex((i) => (i - 1 + (allImages?.length ?? 1)) % (allImages?.length ?? 1));
+    const next = () => setActiveIndex((i) => (i + 1) % (allImages?.length ?? 1));
 
     const openAt = (i: number) => {
         setActiveIndex(i);
@@ -46,7 +48,14 @@ export default function ProjectItem({ cover, title, description, link, techStack
                         }
                     }}
                 >
-                    <Image src={cover} alt={title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+                    <Image 
+                        src={cover} 
+                        alt={title} 
+                        fill 
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+                        className="object-cover" 
+                        priority
+                    />
                 </div>
 
                 {/* Right: Info */}
@@ -74,13 +83,14 @@ export default function ProjectItem({ cover, title, description, link, techStack
 
                     {/* Screenshot thumbnails */}
                     <div className="flex gap-2">
-                        {visibleImages.map((img, i) => (
+                        {previewImages.map((img, i) => (
                             <button
                                 key={i}
-                                onClick={() => openAt(i)}
+                                // +1 because the first image is the cover
+                                onClick={() => openAt(i + 1)}
                                 className="relative md:w-16 md:h-8 w-10 h-6 overflow-hidden border border-border shrink-0 hover:opacity-80 transition-opacity cursor-pointer"
                             >
-                                <Image src={img} alt={`${title} screenshot ${i + 1}`} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
+                                <Image src={img} alt={`${title} screenshot ${i + 1}`} priority fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
 
                                 {/* +N overflow hint on last visible thumbnail */}
                                 {i === MAX_VISIBLE - 1 && extraCount > 0 && (
@@ -104,7 +114,7 @@ export default function ProjectItem({ cover, title, description, link, techStack
 
             {/* Lightbox */}
             <ImageLightbox
-                images={images}
+                images={allImages}
                 title={title}
                 activeIndex={activeIndex}
                 open={lightboxOpen}
