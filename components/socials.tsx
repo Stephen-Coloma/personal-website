@@ -1,6 +1,7 @@
 import { MailOpen } from "lucide-react";
 import { Button } from "./ui/button";
 import ResumeViewer from "./resume-viewer";
+import Link from "next/link";
 
 export default function Socials() {
     return (
@@ -16,16 +17,16 @@ export default function Socials() {
         <div className="flex items-center justify-center">
           {/* linkedin */}
           <Button size={"icon"} variant={"secondary"} className="cursor-pointer" asChild>
-            <a href="https://www.linkedin.com/in/stephen-coloma/" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.linkedin.com/in/stephen-coloma/" target="_blank" rel="noopener noreferrer">
               <LinkedInIcon/>
-            </a>
+            </Link>
           </Button>
 
           {/* github */}
           <Button size={"icon"} variant={"secondary"} className="cursor-pointer" asChild>
-            <a href="https://github.com/Stephen-Coloma" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/Stephen-Coloma" target="_blank" rel="noopener noreferrer">
               <GithubIcon/>
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

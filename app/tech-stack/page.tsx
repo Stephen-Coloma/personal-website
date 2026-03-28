@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { MoveLeft } from "lucide-react";
 import { allTechStack } from "@/data/techstack-data";
 import TechStackBadge from "@/components/techstack-badge";
+import Link from "next/link";
 
 export default function TechStackPage() {
     return (
@@ -13,9 +14,9 @@ export default function TechStackPage() {
                     asChild
                     className="text-muted-foreground cursor-pointer hover:no-underline hover:text-primary p-0 md:p-2 transition-colors"
                 >
-                    <a href="/">
+                    <Link href="/">
                         <MoveLeft /> <span>Back to Home</span>
-                    </a>
+                    </Link>
                 </Button>
 
                 <span className="text-muted-foreground">[Showing All Tech Stack]</span>

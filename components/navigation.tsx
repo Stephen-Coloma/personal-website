@@ -3,6 +3,7 @@
 import { MoveUpRight } from "lucide-react";
 import { Button } from "./ui/button";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Navigation() {
     const [activeSection, setActiveSection] = useState("about");
@@ -53,10 +54,10 @@ export default function Navigation() {
                         activeSection === item.id ? "text-foreground" : "text-muted-foreground"
                     } cursor-pointer hover:no-underline hover:text-primary p-0 md:p-2 transition-colors`}
                 >
-                    <a href={`#${item.id}`}>
+                    <Link href={`#${item.id}`}>
                         <span>{item.label}</span> 
                         <MoveUpRight />
-                    </a>
+                    </Link>
                 </Button>
             ))}
         </div>

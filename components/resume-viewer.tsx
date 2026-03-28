@@ -8,6 +8,7 @@ import {
   DialogTrigger 
 } from "./ui/dialog"
 import { Button } from "./ui/button"
+import Link from "next/link"
 
 interface ResumeViewerProps {
   children: React.ReactNode
@@ -40,20 +41,20 @@ export default function ResumeViewer({ children }: ResumeViewerProps) {
               className="cursor-pointer"
               asChild
             >
-              <a href="/stephen_coloma_resume.pdf" target="_blank">
+              <Link href="/stephen_coloma_resume.pdf" target="_blank">
                 <ExternalLink className="mr-2 h-4 w-4" />
                 Open Original
-              </a>
+              </Link>
             </Button>
             
             <Button 
               className="cursor-pointer"
               asChild
             >
-              <a href="/stephen_coloma_resume.pdf" download>
+              <Link href="/stephen_coloma_resume.pdf" download>
                 <Download className="mr-2 h-4 w-4" />
                 Download
-              </a>
+              </Link>
             </Button>
           </div>
         </DialogHeader>

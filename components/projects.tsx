@@ -2,6 +2,7 @@ import { Button } from "./ui/button";
 import ProjectItem from "./project-item";
 import { MoveUpRight } from "lucide-react";
 import { featuredProjects } from "@/data/projects-data";
+import Link from "next/link";
 
 export default function Projects() {
   return (
@@ -14,9 +15,9 @@ export default function Projects() {
             asChild
             className={`text-muted-foreground cursor-pointer hover:no-underline hover:text-primary transition-colors`}
         >
-            <a href={`/projects`}>
+            <Link href={`/projects`}>
               <span>View all</span> <MoveUpRight />
-            </a>
+            </Link>
         </Button>
       </div>
 

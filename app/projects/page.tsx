@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { MoveLeft } from "lucide-react";
 import { featuredProjects } from "@/data/projects-data"
 import { otherProjects } from "@/data/projects-data"
+import Link from "next/link";
 
 export default function ProjectsPage() {
   const allProjects = [...featuredProjects, ...otherProjects]
@@ -15,9 +16,9 @@ export default function ProjectsPage() {
             asChild
             className={`text-muted-foreground cursor-pointer hover:no-underline hover:text-primary p-0 md:p-2 transition-colors`}
         >
-            <a href={`/`}>
+            <Link href={`/`}>
                 <MoveLeft /> <span>Back to Home</span>
-            </a>
+            </Link>
         </Button>
 
         <span className="text-muted-foreground">[Showing All Projects]</span>

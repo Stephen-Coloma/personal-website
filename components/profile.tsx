@@ -3,6 +3,7 @@ import { BadgeCheck, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import CalcomEmbed from "./calcom-embed"
 import Socials from "./socials"
+import Link from "next/link"
 
 export default function Profile() {
   return (
@@ -41,18 +42,18 @@ export default function Profile() {
 
         <div className="flex items-center gap-1">
           <Button variant="secondary" className="w-1/2 cursor-pointer justify-start" asChild>
-            <a href="viber://chat?number=%2B639458202981" rel="noopener noreferrer">
+            <Link href="viber://chat?number=%2B639458202981" rel="noopener noreferrer">
               <div className="relative w-4 h-4 mr-2">
                 <Image src="/images/viber.png" alt="Viber" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-contain" />
               </div>
               <span>Chat</span>
-            </a>
+            </Link>
           </Button>
 
           <Button variant="link" className="w-1/2 cursor-pointer" asChild>
-            <a href="mailto:hello@stephencoloma.com" rel="noopener noreferrer">
+            <Link href="mailto:hello@stephencoloma.com" rel="noopener noreferrer">
               <span>Email me</span>
-            </a>
+            </Link>
           </Button>
         </div>
 
