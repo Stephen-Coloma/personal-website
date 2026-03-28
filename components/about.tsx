@@ -15,7 +15,7 @@ export default function About() {
           onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
           className="flex items-center gap-1.5 opacity-50 select-none group cursor-pointer hover:opacity-100 transition-opacity"
         >
-            <span className="text-primary">dark mode</span>
+            <span className="text-primary">press</span>
             <kbd className="px-1.5 py-0.5 rounded border border-border bg-muted font-mono text-sm font-medium text-muted-foreground group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary transition-all duration-300">D</kbd>
         </div>
       </div>
@@ -33,7 +33,7 @@ export default function About() {
 
           <span className="text-sm text-muted-foreground">I specialize in developing <strong className="text-foreground">scalable, full-stack systems</strong> using technologies like <strong className="text-foreground">TypeScript, React, Node.js, and AWS</strong>, with a strong focus on <strong className="text-foreground">backend architecture, APIs, and cloud-based solutions</strong>. I enjoy turning complex ideas into clean, reliable, and efficient systems.</span>
 
-          <span className="text-sm text-muted-foreground">I push myself beyond what I already know because <strong className="px-1 bg-primary text-background underline">growth starts where comfort ends</strong>.</span>
+          <span className="text-sm text-muted-foreground">I push myself beyond what I already know because <strong className="px-1 bg-primary text-background underline">growth starts where comfort ends.</strong></span>
       </div>
     </section>
   );

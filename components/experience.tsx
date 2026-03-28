@@ -18,49 +18,73 @@ export default function Experience() {
         <div className="absolute left-8 top-0 bottom-0 w-px bg-border" />
 
         <AccordionPrimitive.Root type="single" collapsible className="flex flex-col">
-          {experiences.map((exp) => (
-            <AccordionItem key={exp.id} value={exp.id} className="border-none">
-              {/* Custom trigger with ChevronRight that rotates on open */}
-              <AccordionPrimitive.Header className="flex">
-                <AccordionPrimitive.Trigger
-                  className={cn(
-                    "group flex flex-1 items-center py-2 px-0 text-left outline-none",
-                    "hover:no-underline cursor-pointer"
-                  )}
-                >
-                  {/* Year */}
-                  <span className="w-16 shrink-0 text-center text-muted-foreground z-10 bg-background">
-                    {exp.year}
-                  </span>
+          {experiences.map((exp, index) => {
+            const isLatest = index === 0;
 
-                  {/* Dot on the line */}
-                  <div className="w-1.5 h-1.5 bg-muted-foreground shrink-0 -ml-[3px] z-10" />
+            return (
+              <AccordionItem key={exp.id} value={exp.id} className="border-none">
+                <AccordionPrimitive.Header className="flex">
+                  <AccordionPrimitive.Trigger
+                    className={cn(
+                      "group flex flex-1 items-center py-2 px-0 text-left outline-none",
+                      "hover:no-underline cursor-pointer"
+                    )}
+                  >
+                    {/* Year */}
+                    <span 
+                      className={cn(
+                        "w-16 shrink-0 text-center z-10 bg-background transition-colors duration-200",
+                        isLatest ? "text-primary font-bold" : "text-muted-foreground",
+                        "group-hover:text-foreground group-hover:font-bold"
+                      )}
+                    >
+                      {exp.year}
+                    </span>
 
-                  {/* Title + Company */}
-                  <div className="flex flex-col pl-3 text-left flex-1">
-                    <span className="font-semibold text-foreground">{exp.title}</span>
-                    <span className="text-muted-foreground">{exp.company}</span>
-                  </div>
+                    {/* Pixel on the line */}
+                    <div 
+                      className={cn(
+                        "w-1.5 h-1.5 shrink-0 -ml-[3px] z-10 transition-colors duration-200",
+                        isLatest ? "bg-primary" : "bg-muted",
+                        "group-hover:bg-foreground"
+                      )} 
+                    />
 
-                  {/* Chevron: rotates right → down on open */}
-                  <ChevronRight className="w-4 h-4 mr-4 text-muted-foreground shrink-0 transition-transform duration-200 group-data-[state=open]:rotate-90" />
-                </AccordionPrimitive.Trigger>
-              </AccordionPrimitive.Header>
-
-              <AccordionContent className="pl-18 pr-0 pb-3">
-                <div className="flex flex-col gap-4">
-                  <span className="text-muted-foreground leading-relaxed">{exp.description}</span>
-                  {exp.techStack && exp.techStack.length > 0 && (
-                    <div className="flex flex-wrap gap-2">
-                      {exp.techStack.map((tech) => (
-                        <TechStackBadge key={tech} tech={tech} />
-                      ))}
+                    {/* Title + Company */}
+                    <div className="flex flex-col pl-3 text-left flex-1">
+                      <span className="font-semibold text-foreground transition-colors duration-200">
+                        {exp.title}
+                      </span>
+                      <span className="text-muted-foreground">
+                        {exp.company}
+                      </span>
                     </div>
-                  )}
-                </div>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
+
+                    {/* Chevron */}
+                    <ChevronRight 
+                      className={cn(
+                        "w-4 h-4 mr-4 text-muted-foreground shrink-0 transition-all duration-200 group-data-[state=open]:rotate-90",
+                        "group-hover:text-foreground"
+                      )} 
+                    />
+                  </AccordionPrimitive.Trigger>
+                </AccordionPrimitive.Header>
+
+                <AccordionContent className="pl-18 pr-0 pb-3">
+                  <div className="flex flex-col gap-4">
+                    <span className="text-muted-foreground leading-relaxed">{exp.description}</span>
+                    {exp.techStack && exp.techStack.length > 0 && (
+                      <div className="flex flex-wrap gap-2">
+                        {exp.techStack.map((tech) => (
+                          <TechStackBadge key={tech} tech={tech} />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            );
+          })}
         </AccordionPrimitive.Root>
       </div>
     </section>

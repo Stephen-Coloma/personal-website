@@ -1,11 +1,26 @@
+'use client'
+
 import Image from "next/image"
-import { BadgeCheck, MapPin } from "lucide-react"
+import { BadgeCheck, MapPin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import CalcomEmbed from "./calcom-embed"
 import Socials from "./socials"
 import Link from "next/link"
+import { toast } from "sonner"
+import { 
+  Tooltip, 
+  TooltipContent, 
+  TooltipTrigger 
+} from "@/components/ui/tooltip"
 
 export default function Profile() {
+  const handleViberClick = () => {
+    toast.info("Opening Viber...", {
+      description: "If it doesn't open, ensure Viber is installed.",
+      duration: 5000,
+    });
+  };
+
   return (
     <div className="flex flex-row md:flex-col gap-2 md:gap-1 items-center md:items-start">
       {/* Square Profile Image - Fixed width in mobile, Full Width in desktop */}
@@ -41,20 +56,36 @@ export default function Profile() {
         <CalcomEmbed />
 
         <div className="flex items-center gap-1">
-          <Button variant="secondary" className="w-1/2 cursor-pointer justify-start" asChild>
-            <Link href="viber://chat?number=%2B639458202981" rel="noopener noreferrer">
-              <div className="relative w-4 h-4 mr-2">
-                <Image src="/images/viber.png" alt="Viber" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-contain" />
-              </div>
-              <span>Chat</span>
-            </Link>
-          </Button>
+          <Tooltip>
+            <TooltipTrigger asChild>              
+              <Button variant="secondary" className="w-1/2 cursor-pointer justify-start" asChild onClick={handleViberClick}>
+                <Link href="viber://chat?number=%2B639458202981" rel="noopener noreferrer">
+                  <div className="relative w-4 h-4 mr-2">
+                    <Image src="/images/viber.png" alt="Viber" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-contain" />
+                  </div>
+                  <span>Chat</span>
+                </Link>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium">
+              <Mail className="h-3 w-3" />
+              +63 945 820 2981
+            </TooltipContent>
+          </Tooltip>
 
-          <Button variant="link" className="w-1/2 cursor-pointer" asChild>
-            <Link href="mailto:hello@stephencoloma.com" rel="noopener noreferrer">
-              <span>Email me</span>
-            </Link>
-          </Button>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Button variant="link" className="w-1/2 cursor-pointer" asChild>
+                <Link href="mailto:hello@stephencoloma.com" rel="noopener noreferrer">
+                  <span>Email me</span>
+                </Link>
+              </Button>
+            </TooltipTrigger>
+            <TooltipContent className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium">
+              <Mail className="h-3 w-3" />
+              hello@stephencoloma.com
+            </TooltipContent>
+          </Tooltip>
         </div>
 
         {/* Socials in profile section for mobile */}
