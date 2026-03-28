@@ -10,16 +10,27 @@ export const mainTechStack: TechCategory[] = [
   },
   {
     label: "Backend",
-    items: ["Node.js", "NestJS", "Express.js", "MySQL", "PostgreSQL", "Amazon DynamoDB", "Redis", "Supabase"],
+    items: ["Node.js", "NestJS", "MySQL", "PostgreSQL", "Prisma", "Amazon DynamoDB", "Redis", "Supabase"],
   },
   {
     label: "DevOps & Cloud",
-    items: ["AWS", "Docker", "NGINX", "GitHub Actions", "PlanetScale"],
+    items: ["AWS", "Docker", "Localstack", "NGINX", "GitHub Actions"],
   },
 ];
 
 export const allTechStack: TechCategory[] = [
-  ...mainTechStack,
+  {
+    label: "Frontend",
+    items: ["TypeScript", "React", "Next.js", "Vite", "Tailwind CSS", "ShadCN UI", "Framer Motion"],
+  },
+  {
+    label: "Backend",
+    items: ["Node.js", "NestJS", "Express.js", "MySQL", "PostgreSQL", "Prisma", "Amazon DynamoDB", "Redis", "Supabase"],
+  },
+  {
+    label: "DevOps & Cloud",
+    items: ["AWS", "Docker", "Localstack", "NGINX", "GitHub Actions", "PlanetScale"],
+  },
   {
     label: "AI",
     items: ["ChatGPT", "Google Gemini", "Claude", "Cursor", "Antigravity"],

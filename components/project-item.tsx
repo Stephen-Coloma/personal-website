@@ -40,7 +40,11 @@ export default function ProjectItem({ cover, title, description, link, techStack
                 {/* Left: Cover Image */}
                 <div 
                     className="relative shrink-0 w-29  h-29 md:w-34 md:h-34 overflow-hidden cursor-pointer"
-                    onClick={() => openAt(0)}
+                    onClick={() =>{
+                        if(images.length > 0){
+                            openAt(0);
+                        }
+                    }}
                 >
                     <Image src={cover} alt={title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                 </div>
