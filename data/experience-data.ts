@@ -13,7 +13,7 @@ export const experiences = [
     year: "2025",
     title: "Full Stack Developer Intern",
     company: "Old.St Labs",
-    techStack: ["Next.js", "NestJS", "Nx Workspace", "AWS DynamoDB", "AWS SQS", "Convex", "Clerk", "OpenAI", "Webhooks", "Localstack", "Jest"],
+    techStack: ["Next.js", "NestJS", "Typescript", "Nx Workspace", "AWS DynamoDB", "AWS SQS", "Convex", "Clerk", "OpenAI", "Webhooks", "Localstack", "Jest", "Microservices"],
     description: 
       "Built scalable microservices and full-stack apps with Next.js, NestJS, and Nx, using DynamoDB and SQS. Created an internal task tracker with Convex, Clerk, and OpenAI, integrated with ClickUp, Slack, and Clockify."
   },

@@ -64,7 +64,7 @@ export default function ImageLightbox({
 
                     {/* Counter */}
                     <span
-                        className="absolute top-4 left-1/2 -translate-x-1/2 text-white/50 text-[11px] font-medium"
+                        className="absolute top-4 left-1/2 -translate-x-1/2 text-white/50 font-medium"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {activeIndex + 1} / {images.length}
@@ -72,7 +72,7 @@ export default function ImageLightbox({
 
                     {/* Image */}
                     <div
-                        className="relative w-[90vw] max-w-4xl aspect-video"
+                        className="relative w-[80vw] max-w-4xl h-[80vh]"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <Image
