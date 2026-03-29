@@ -26,7 +26,7 @@ export default function ProjectItem({ cover, title, description, link, techStack
     const allImages = [cover, ...images];
 
     const previewImages = images?.slice(0, MAX_VISIBLE) ?? [];
-    const extraCount = (allImages?.length ?? 0) - MAX_VISIBLE;
+    const extraCount = (images?.length ?? 0) - MAX_VISIBLE;
 
     const prev = () => setActiveIndex((i) => (i - 1 + (allImages?.length ?? 1)) % (allImages?.length ?? 1));
     const next = () => setActiveIndex((i) => (i + 1) % (allImages?.length ?? 1));

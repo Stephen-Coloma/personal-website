@@ -31,7 +31,7 @@ export default function ResumeViewer({ children }: ResumeViewerProps) {
               <DialogTitle className="font-semibold tracking-tight">
                 stephen_coloma_resume.pdf
               </DialogTitle>
-              <p className="text-xs text-muted-foreground font-medium">Last updated: March 2026</p>
+              <p className="text-xs text-muted-foreground font-medium">Last updated: December 2025</p>
             </div>
           </div>
 
