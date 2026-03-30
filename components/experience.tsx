@@ -56,7 +56,7 @@ export default function Experience() {
                         {exp.title}
                       </span>
                       <span className="text-muted-foreground">
-                        {exp.company}
+                        {exp.company} • {exp.location}
                       </span>
                     </div>
 
