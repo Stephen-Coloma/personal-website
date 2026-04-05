@@ -10,7 +10,7 @@ export const mainTechStack: TechCategory[] = [
   },
   {
     label: "Backend",
-    items: ["Node.js", "NestJS", "MySQL", "PostgreSQL", "Prisma", "Amazon DynamoDB", "Redis", "Supabase"],
+    items: ["Node.js", "NestJS", "AWS SDK", "MySQL", "PostgreSQL", "Prisma", "Amazon DynamoDB", "Redis", "Supabase"],
   },
   {
     label: "DevOps & Cloud",
@@ -21,11 +21,11 @@ export const mainTechStack: TechCategory[] = [
 export const allTechStack: TechCategory[] = [
   {
     label: "Frontend",
-    items: ["TypeScript", "React", "Next.js", "Vite", "Tailwind CSS", "ShadCN UI", "Framer Motion"],
+    items: ["TypeScript", "React", "Next.js", "Vite", "Tailwind CSS", "Zustand", "TanStack Query", "TanStack Form", "Axios", "ShadCN UI", "Framer Motion"],
   },
   {
     label: "Backend",
-    items: ["Node.js", "NestJS", "Express.js", "MySQL", "PostgreSQL", "Prisma", "Amazon DynamoDB", "Redis", "Supabase"],
+    items: ["Node.js", "NestJS", "Express.js", "AWS SDK", "MySQL", "PostgreSQL", "Prisma", "Amazon DynamoDB", "Redis", "Supabase", "JWT", "Microservices"],
   },
   {
     label: "DevOps & Cloud",

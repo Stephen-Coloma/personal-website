@@ -27,7 +27,7 @@ export default function About() {
 
       {/* hero description */}
       <div className="flex flex-col gap-4">
-          <span className="text-sm text-muted-foreground">Hi, I’m <strong className="text-foreground">Stephen Coloma</strong>. I’m a <strong className="text-foreground">software engineer</strong> driven by curiosity and a passion for building impactful web applications that solve real-world problems.</span>
+          <span className="text-sm text-muted-foreground">Hi, I’m <strong className="text-foreground">Stephen Coloma</strong>, a <strong className="text-foreground">software engineer</strong> driven by curiosity and a passion for building impactful web applications that solve real-world problems.</span>
 
           <span className="text-sm text-muted-foreground">I specialize in developing <strong className="text-foreground">scalable, full-stack systems</strong> using technologies like <strong className="text-foreground">TypeScript, React, Node.js, and AWS</strong>, with a strong focus on <strong className="text-foreground">backend architecture, APIs, and cloud-based solutions</strong>. I enjoy turning complex ideas into clean, reliable, and efficient systems.</span>
 
