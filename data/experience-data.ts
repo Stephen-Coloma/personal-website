@@ -12,22 +12,22 @@ export const experiences = [
   {
     id: "item-2",
     year: "2025",
-    title: "Full Stack Developer Intern",
-    company: "Old.St Labs",
-    location: "London, UK",
-    techStack: ["Next.js", "NestJS", "Typescript", "Nx Workspace", "AWS DynamoDB", "AWS SQS", "Convex", "Clerk", "OpenAI", "Webhooks", "Localstack", "Jest", "Microservices"],
-    description: 
-      "Built scalable microservices and full-stack apps with Next.js, NestJS, and Nx, using DynamoDB and SQS. Created an internal task tracker with Convex, Clerk, and OpenAI, integrated with ClickUp, Slack, and Clockify."
-  },
-  {
-    id: "item-3",
-    year: "2025",
     title: "Full Stack Web Developer",
     company: "SLU IT Committee",
     location: "Baguio City, PH",
     techStack: ["PHP", "MySQL", "GitHub Actions", "Docker"],
     description:
       "Contributed to and maintained the university's internal web systems specifically the SLU Voting System. Implemented new features based on stakeholder requirements and ensured consistent uptime. Collaborated with the team to modernize legacy systems.",
+  },
+  {
+    id: "item-3",
+    year: "2025",
+    title: "Full Stack Developer Intern",
+    company: "Old.St Labs",
+    location: "London, UK",
+    techStack: ["Next.js", "NestJS", "Typescript", "Nx Workspace", "AWS DynamoDB", "AWS SQS", "Convex", "Clerk", "OpenAI", "Webhooks", "Localstack", "Jest", "Microservices"],
+    description: 
+      "Built scalable microservices and full-stack apps with Next.js, NestJS, and Nx, using DynamoDB and SQS. Created an internal task tracker with Convex, Clerk, and OpenAI, integrated with ClickUp, Slack, and Clockify."
   },
   {
     id: "item-4",
