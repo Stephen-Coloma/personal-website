@@ -24,7 +24,7 @@ export default function Profile() {
   return (
     <div className="flex flex-row md:flex-col gap-2 md:gap-1 items-center md:items-start">
       {/* Square Profile Image - Fixed width in mobile, Full Width in desktop */}
-      <div className="relative aspect-square w-48 md:w-full shrink-0 overflow-hidden">
+      <div className="relative aspect-square w-42 md:w-full shrink-0 overflow-hidden">
         <Image
           src="/images/profile-photo.png"
           alt="Stephen Coloma"

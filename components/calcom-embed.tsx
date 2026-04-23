@@ -14,7 +14,7 @@ export default function CalcomEmbed() {
   }, [])
   return (
     <Button 
-      variant="default" className="w-full justify-start cursor-pointer relative"
+      variant="default" className="hidden md:inline-flex w-full justify-start cursor-pointer relative"
       data-cal-namespace="15min"
       data-cal-link="stephen-coloma/15min"
       data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
