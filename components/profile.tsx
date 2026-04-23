@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image"
-import { BadgeCheck, MapPin, Mail } from "lucide-react"
+import { BadgeCheck, MapPin, Mail, AtSign, Phone, Hash } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import CalcomEmbed from "./calcom-embed"
 import Socials from "./socials"
@@ -14,17 +14,17 @@ import {
 } from "@/components/ui/tooltip"
 
 export default function Profile() {
-  const handleViberClick = () => {
-    toast.info("Opening Viber...", {
-      description: "If it doesn't open, ensure Viber is installed.",
-      duration: 5000,
-    });
-  };
+  // const handleViberClick = () => {
+  //   toast.info("Opening Viber...", {
+  //     description: "If it doesn't open, ensure Viber is installed.",
+  //     duration: 5000,
+  //   });
+  // };
 
   return (
     <div className="flex flex-row md:flex-col gap-2 md:gap-1 items-center md:items-start">
       {/* Square Profile Image - Fixed width in mobile, Full Width in desktop */}
-      <div className="relative aspect-square w-44 md:w-full shrink-0 overflow-hidden">
+      <div className="relative aspect-square w-48 md:w-full shrink-0 overflow-hidden">
         <Image
           src="/images/profile-photo.png"
           alt="Stephen Coloma"
@@ -44,18 +44,26 @@ export default function Profile() {
             <h1 className="text-xl md:text-lg font-semibold tracking-tighter">Stephen Coloma</h1>
             <BadgeCheck className="h-4 w-4 text-blue-500" strokeWidth={3}/>
           </div>
-          <span className="text-sm text-muted-foreground">Software Engineer</span>
+          <span className="text-sm text-muted-foreground">Full Stack Software Engineer</span>
         </div>
 
         <div className="flex items-center gap-1 text-muted-foreground">
           <MapPin className="h-4 w-4 text-muted-foreground" />
           <span className="text-sm text-muted-foreground">Baguio City, Philippines</span>
         </div>
+        <div className="flex items-center gap-1 text-muted-foreground">
+          <AtSign className="h-4 w-4 text-muted-foreground" />
+          <span className="text-sm text-muted-foreground">hello@stephencoloma.com</span>
+        </div>
+        <div className="flex items-center gap-1 text-muted-foreground">
+          <Hash className="h-4 w-4 text-muted-foreground" />
+          <span className="text-sm text-muted-foreground">(+63) 945 820 2981</span>
+        </div>
 
         {/* Action Buttons */}
         <CalcomEmbed />
 
-        <div className="flex items-center gap-1">
+        {/* <div className="flex items-center gap-1">
           <Tooltip>
             <TooltipTrigger asChild>              
               <Button variant="secondary" className="w-1/2 cursor-pointer justify-start" asChild onClick={handleViberClick}>
@@ -86,7 +94,7 @@ export default function Profile() {
               hello@stephencoloma.com
             </TooltipContent>
           </Tooltip>
-        </div>
+        </div> */}
 
         {/* Socials in profile section for mobile */}
         <div className="md:hidden">
