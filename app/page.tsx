@@ -15,10 +15,10 @@ export default function Page() {
         <Navigation />
       </div>
 
-      <main className="px-2 py-4 grid grid-cols-1 md:grid-cols-4 md:gap-4">
+      <main className="px-2 py-4 grid grid-cols-1 md:grid-cols-4 md:gap-6">
 
         {/* left side */}
-        <section className="flex flex-col h-auto md:h-[calc(100vh-8rem)] md:sticky md:top-4 gap-4">
+        <section className="flex flex-col h-auto md:h-[calc(100vh-8rem)] md:sticky md:top-4">
 
           <Profile />
           
@@ -34,7 +34,7 @@ export default function Page() {
         </section> 
 
         {/* right side */}
-        <section className="col-span-1 md:col-span-3 space-y-8">
+        <section className="col-span-1 md:col-span-3 space-y-12">
           <About />
           <Experience />
           <Projects />

@@ -25,13 +25,13 @@ export default function ResumeViewer({ children }: ResumeViewerProps) {
         <DialogHeader className="p-4 gap-4">
           <div className="flex items-center gap-2">
             <div className="bg-primary/10 p-2">
-              <span className="text-primary font-bold text-xs">PDF</span>
+              <span className="text-primary font-bold text-sm">PDF</span>
             </div>
             <div>
               <DialogTitle className="font-semibold tracking-tight">
                 stephen_coloma_resume.pdf
               </DialogTitle>
-              <p className="text-xs text-muted-foreground font-medium">Last updated: April 2026</p>
+              <p className="text-sm text-muted-foreground font-medium">Last updated: April 2026</p>
             </div>
           </div>
 

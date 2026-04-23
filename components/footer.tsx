@@ -4,7 +4,7 @@ export default function Footer() {
     return (
         <footer className="relative overflow-hidden">
             {/* Image container */}
-            <div className="relative w-full h-40 md:h-72">
+            <div className="relative w-full h-40 md:h-80">
                 <Image
                     src="/images/profile-photo.png"
                     alt="Footer background"

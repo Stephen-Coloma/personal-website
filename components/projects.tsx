@@ -21,7 +21,7 @@ export default function Projects() {
         </Button>
       </div>
 
-      <div className="space-y-2 md:space-y-0">
+      <div className="space-y-2 md:space-y-2">
         {featuredProjects.map((project) => (
           <ProjectItem
             key={project.title}

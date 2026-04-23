@@ -74,7 +74,7 @@ export default function ProjectItem({ cover, title, description, link, techStack
                                 <MoveUpRight className="w-3 h-3" />
                             </a>
                         </TooltipTrigger>
-                        <TooltipContent className="px-3 py-1.5 text-xs font-medium">
+                        <TooltipContent className="px-3 py-1.5 text-sm font-medium">
                             visit {link}
                         </TooltipContent>
                     </Tooltip>

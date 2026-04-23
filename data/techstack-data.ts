@@ -10,7 +10,7 @@ export const mainTechStack: TechCategory[] = [
   },
   {
     label: "Backend",
-    items: ["Node.js", "NestJS", "AWS SDK", "MySQL", "PostgreSQL", "Prisma", "Amazon DynamoDB", "Redis", "Supabase"],
+    items: ["Node.js", "NestJS", "AWS SDK", "PostgreSQL", "Amazon DynamoDB", "Redis", "Supabase", "Google Gemini", "Claude", "ChatGPT", "Cursor", "Antigravity"],
   },
   {
     label: "DevOps & Cloud",

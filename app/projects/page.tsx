@@ -9,7 +9,7 @@ export default function ProjectsPage() {
   const allProjects = [...featuredProjects, ...otherProjects]
 
   return (
-    <div className="animate-enter-up px-2 py-4 space-y-2 md:space-y-0">
+    <div className="animate-enter-up px-2 py-4 space-y-2 md:space-y-2">
       <div className="w-full mb-4 flex justify-between">
         <Button
             variant="link"
