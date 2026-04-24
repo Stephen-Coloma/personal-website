@@ -18,7 +18,7 @@ export default function Page() {
       <main className="px-2 py-4 md:py-6 grid grid-cols-1 md:grid-cols-4 md:gap-6">
 
         {/* left side */}
-        <section className="flex flex-col h-auto md:h-[calc(100vh-8rem)] md:sticky">
+        <section className="flex flex-col h-auto md:h-[calc(100vh-8rem)] md:sticky md:top-6">
 
           <Profile />
           
