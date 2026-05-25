@@ -7,7 +7,7 @@ export const experiences = [
     location: "Baguio City, PH",
     techStack: ["Algorithms", "SDLC", "Software Engineering", "Web Development", "AI"],
     description:
-      "Pursuing a degree in Computer Science with a focus on software engineering. Engaged in research and software development roles within the university tech and IT committees.",
+      "Graduated Summa Cum Laude with a bachelor's degree in Computer Science, specializing in software engineering. Actively engaged in research and development, contributing to various projects and initiatives within the university's tech and IT committees.",
   },
   {
     id: "item-2",
