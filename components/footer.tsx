@@ -6,7 +6,7 @@ export default function Footer() {
             {/* Image container */}
             <div className="relative w-full h-40 md:h-80">
                 <Image
-                    src="/images/profile-photo.png"
+                    src="/images/profile-photo-grad.jpg"
                     alt="Footer background"
                     fill
                     className="object-cover object-top"

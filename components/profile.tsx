@@ -26,7 +26,7 @@ export default function Profile() {
       {/* Square Profile Image - Fixed width in mobile, Full Width in desktop */}
       <div className="relative aspect-square w-42 md:w-full shrink-0 overflow-hidden">
         <Image
-          src="/images/profile-photo.png"
+          src="/images/profile-photo-grad.jpg"
           alt="Stephen Coloma"
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
