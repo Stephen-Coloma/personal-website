@@ -34,7 +34,7 @@ export default function Profile() {
 
         <div className="flex items-center gap-1 text-muted-foreground">
           <MapPin className="h-4 w-4 text-muted-foreground" />
-          <span className="text-sm text-muted-foreground">Baguio City, Philippines</span>
+          <span className="text-sm text-muted-foreground">Metro Manila, Philippines</span>
         </div>
         <div className="flex items-center gap-1 text-muted-foreground">
           <AtSign className="h-4 w-4 text-muted-foreground" />
